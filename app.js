@@ -1,6 +1,6 @@
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
-    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors', userInput === 'bomb') {
         return userInput;
     } else {
         console.log('Error!');
@@ -23,6 +23,7 @@ function getComputerChoice() {
 // console.log(getComputerChoice());
 
 function determineWinner(userChoice, computerChoice) {
+    if (userChoice === 'bomb') return 'You won with FATALITY!!!';
     if (userChoice === computerChoice) {
         return 'The game is a tie!';
     }
